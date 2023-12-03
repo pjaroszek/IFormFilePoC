@@ -1,0 +1,6 @@
+@Jaroszek.CoderHouse.IFormFilePoC.WebApi_HostAddress = http://localhost:5056
+
+GET {{Jaroszek.CoderHouse.IFormFilePoC.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
