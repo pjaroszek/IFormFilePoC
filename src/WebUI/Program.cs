@@ -1,7 +1,8 @@
-using Jaroszek.CCoderHouse.IFormFilePoC.Application;
+using Jaroszek.CoderHouse.IFormFilePoC.Application;
 using Jaroszek.CoderHouse.IFormFilePoC.Application.FileOperations.Commands;
 using Jaroszek.CoderHouse.IFormFilePoC.Infrastructure;
 using MediatR;
+using MinimalHelpers.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,11 @@ builder.Services.AddInfrastructure(builder.Configuration);
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    // using MinimalHelpers.OpenApi;
+    options.AddFormFile();
+});
 
 var app = builder.Build();
 

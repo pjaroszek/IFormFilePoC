@@ -11,7 +11,6 @@ services:
     depends_on:
       - seq
     environment:
-      ASPNETCORE_ENVIRONMENT: "Development"
       SEQ__SERVERURL: "http://localhost:5341"
       SEQ__APIKEY: "jT1bDDw0eyTlsEYwevJb"
       SEQ_ADDRESS: "http://localhost:5341"

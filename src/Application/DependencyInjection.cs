@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Jaroszek.CCoderHouse.IFormFilePoC.Application;
+namespace Jaroszek.CoderHouse.IFormFilePoC.Application;
 
 public static class DependencyInjection
 {

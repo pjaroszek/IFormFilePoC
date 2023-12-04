@@ -28,4 +28,4 @@ USER dotnet:dotnet
 
 ENV ASPNETCORE_URLS http://+:5056
 EXPOSE 5056
-ENTRYPOINT [ "dotnet", "Jaroszek.CoderHouse.IFormFilePoC.WebApi.dll"]
+ENTRYPOINT [ "dotnet", "Jaroszek.CoderHouse.IFormFilePoC.WebApi"]
