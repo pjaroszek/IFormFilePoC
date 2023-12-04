@@ -1,32 +1,11 @@
 version: "3.9"
 networks:
   localdev:
-volumes:
-  seqdata:
-    external: true
 services:
-  web:
-    image: pjaroszek/IFormFilePoC:latest
+  file:
+    image: pjaroszek/iformfilepoc:latest
     build: .
-    depends_on:
-      - seq
-    environment:
-      SEQ__SERVERURL: "http://localhost:5341"
-      SEQ__APIKEY: "jT1bDDw0eyTlsEYwevJb"
-      SEQ_ADDRESS: "http://localhost:5341"
     ports:
       - "5056:5056"
     networks:
       - localdev
-  seq:
-    image: datalust/seq:latest
-    environment:
-      ACCEPT_EULA: "Y"
-      SEQ_ADDRESS: "http://localhost:5341"
-      SEQ_API_KEY: "0CYeH1hXkrTzLvDhNphZ"
-    ports:
-      - "5341:80"
-    networks:
-      - localdev
-    volumes:
-      - seqdata:/data
