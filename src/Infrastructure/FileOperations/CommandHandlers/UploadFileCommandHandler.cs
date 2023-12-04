@@ -7,6 +7,7 @@ internal sealed class UploadFileCommandHandler: IRequestHandler<UploadFileComman
 {
     public Task Handle(UploadFileCommand request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        Console.WriteLine(request.File.FileName);
+      return Task.CompletedTask;
     }
 }
